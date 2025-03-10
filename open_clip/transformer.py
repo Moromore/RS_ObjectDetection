@@ -324,23 +324,6 @@ class Transformer(nn.Module):
                 x = r(x, attn_mask=attn_mask)
         return x
 
-    # def forward2(self, x: torch.Tensor, attn_mask: Optional[torch.Tensor] = None):
-    #
-    #     for r in self.resblocks:
-    #         if self.grad_checkpointing and not torch.jit.is_scripting():
-    #             # TODO: handle kwargs https://github.com/pytorch/pytorch/issues/79887#issuecomment-1161758372
-    #             x = checkpoint(r, x, None, None, attn_mask)
-    #         else:
-    #             x = r(x, attn_mask=attn_mask)
-    #     features_list = []
-    #     x = x[1:, :, :] #[625,B,768]
-    #     # x = x.permute(1, 0, 2)
-    #     B=x.shape[1]
-    #     x = x.permute(1, 2, 0).reshape(B, -1, 25, 25)  # LND -> NLD
-    #     for i in range(4):
-    #         features_list.append(x)
-    #     return features_list
-
     def forward2(self, x: torch.Tensor, attn_mask: Optional[torch.Tensor] = None):
 
         features_list = []
@@ -351,7 +334,7 @@ class Transformer(nn.Module):
             else:
                 x = r(x, attn_mask=attn_mask)
             features_list.append(x)
-
+        #将原本只输出最后一层的feature改为了提取四层features
         layers = len(features_list)
         if layers == 12:
             indices_to_keep = [3, 5, 7, 11]
@@ -602,7 +585,7 @@ class VisionTransformer(nn.Module):
         x = self.ln_pre(x)
         x = x.permute(1, 0, 2)  # NLD -> LND
         x = self.transformer.forward2(x)
-
+        #直接将transformer提取的四层特征reshape成rpn_head接受的输入形状，并直接返回，省略了原本的_global_pool和pooled = pooled @ self.proj
         x = [tensor[1:, :, :]
              .permute(1, 2, 0)
              .reshape(B, C, H, W)

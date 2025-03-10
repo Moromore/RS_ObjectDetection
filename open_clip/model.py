@@ -264,6 +264,7 @@ class CLIP(nn.Module):
 
     def encode_image(self, image, normalize: bool = False):
         features = self.visual(image)
+        #原本features为VisionTransformer最后一层输出，现在为提取了四层的输出
         # return F.normalize(features, dim=-1) if normalize else features
         if isinstance(features, list):
             features = list(map(lambda x: F.normalize(x, dim=-1) if normalize else x, features))

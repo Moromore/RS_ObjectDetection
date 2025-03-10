@@ -185,6 +185,7 @@ class CLIP():
     def __init__(self,pretrained=None,model_name=None, **kwargs):
 
         self.pretrained = pretrained
+        #通过open_clip库的model.py 和 transformer.py函数来构建模型
         clip_model = open_clip.create_model_and_transforms(model_name)
         self.model = clip_model[0]
 
