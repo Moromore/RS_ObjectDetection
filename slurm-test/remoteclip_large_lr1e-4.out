@@ -1,0 +1,54 @@
+16 57
+Position interpolate from 16x16 to 57x57
+load state dict message:
+<All keys matched successfully>
+Starting loading DIOR obb dataset information.
+Finishing loading DIOR obb, get 11725 images, using 46.466s.
+{'num_layers': 12, 'layer_decay_rate': 0.75, 'custom_keys': {'bias': {'decay_multi': 0.0}, 'pos_embed': {'decay_mult': 0.0}, 'relative_position_bias_table': {'decay_mult': 0.0}, 'norm': {'decay_mult': 0.0}, 'rel_pos_h': {'decay_mult': 0.0}, 'rel_pos_w': {'decay_mult': 0.0}, 'visual': {'decay_mult': 0.0}}}
+Build LayerDecayOptimizerConstructor 0.750000 - 14
+Param groups = {
+  "layer_13_decay": {
+    "param_names": [
+      "neck.lateral_convs.0.conv.weight",
+      "neck.lateral_convs.1.conv.weight",
+      "neck.lateral_convs.2.conv.weight",
+      "neck.lateral_convs.3.conv.weight",
+      "neck.fpn_convs.0.conv.weight",
+      "neck.fpn_convs.1.conv.weight",
+      "neck.fpn_convs.2.conv.weight",
+      "neck.fpn_convs.3.conv.weight",
+      "rpn_head.rpn_conv.weight",
+      "rpn_head.rpn_cls.weight",
+      "rpn_head.rpn_reg.weight",
+      "roi_head.bbox_head.fc_cls.weight",
+      "roi_head.bbox_head.fc_reg.weight",
+      "roi_head.bbox_head.shared_fcs.0.weight",
+      "roi_head.bbox_head.shared_fcs.1.weight"
+    ],
+    "lr_scale": 1.0,
+    "lr": 0.0001,
+    "weight_decay": 0.05
+  },
+  "layer_13_no_decay_bias": {
+    "param_names": [
+      "neck.lateral_convs.0.conv.bias",
+      "neck.lateral_convs.1.conv.bias",
+      "neck.lateral_convs.2.conv.bias",
+      "neck.lateral_convs.3.conv.bias",
+      "neck.fpn_convs.0.conv.bias",
+      "neck.fpn_convs.1.conv.bias",
+      "neck.fpn_convs.2.conv.bias",
+      "neck.fpn_convs.3.conv.bias",
+      "rpn_head.rpn_conv.bias",
+      "rpn_head.rpn_cls.bias",
+      "rpn_head.rpn_reg.bias",
+      "roi_head.bbox_head.fc_cls.bias",
+      "roi_head.bbox_head.fc_reg.bias",
+      "roi_head.bbox_head.shared_fcs.0.bias",
+      "roi_head.bbox_head.shared_fcs.1.bias"
+    ],
+    "lr_scale": 1.0,
+    "lr": 0.0001,
+    "weight_decay": 0.0
+  }
+}

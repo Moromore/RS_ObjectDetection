@@ -1,0 +1,975 @@
+The relative_pos_embedding is used
+The relative_pos_embedding is used
+The relative_pos_embedding is used
+The relative_pos_embedding is used
+The relative_pos_embedding is used
+The relative_pos_embedding is used
+The relative_pos_embedding is used
+The relative_pos_embedding is used
+load from model_zoo/vitae-b-checkpoint-1599-transform-no-average.pth
+Starting loading DIOR obb dataset information.
+Finishing loading DIOR obb, get 11725 images, using 7.396s.
+{'num_layers': 12, 'layer_decay_rate': 0.75, 'custom_keys': {'bias': {'decay_multi': 0.0}, 'pos_embed': {'decay_mult': 0.0}, 'relative_position_bias_table': {'decay_mult': 0.0}, 'norm': {'decay_mult': 0.0}, 'rel_pos_h': {'decay_mult': 0.0}, 'rel_pos_w': {'decay_mult': 0.0}}}
+Build LayerDecayOptimizerConstructor 0.750000 - 14
+Param groups = {
+  "layer_0_no_decay_pos_embed": {
+    "param_names": [
+      "backbone.pos_embed"
+    ],
+    "lr_scale": 0.023757264018058777,
+    "lr": 2.3757264018058777e-06,
+    "weight_decay": 0.0
+  },
+  "layer_0_decay": {
+    "param_names": [
+      "backbone.patch_embed.proj.weight"
+    ],
+    "lr_scale": 0.023757264018058777,
+    "lr": 2.3757264018058777e-06,
+    "weight_decay": 0.05
+  },
+  "layer_0_no_decay_bias": {
+    "param_names": [
+      "backbone.patch_embed.proj.bias"
+    ],
+    "lr_scale": 0.023757264018058777,
+    "lr": 2.3757264018058777e-06,
+    "weight_decay": 0.0
+  },
+  "layer_1_no_decay_norm": {
+    "param_names": [
+      "backbone.blocks.0.norm1.weight",
+      "backbone.blocks.0.norm2.weight"
+    ],
+    "lr_scale": 0.03167635202407837,
+    "lr": 3.167635202407837e-06,
+    "weight_decay": 0.0
+  },
+  "layer_1_no_decay_bias": {
+    "param_names": [
+      "backbone.blocks.0.norm1.bias",
+      "backbone.blocks.0.attn.q_bias",
+      "backbone.blocks.0.attn.v_bias",
+      "backbone.blocks.0.attn.sampling_offsets.2.bias",
+      "backbone.blocks.0.attn.sampling_scales.2.bias",
+      "backbone.blocks.0.attn.sampling_angles.2.bias",
+      "backbone.blocks.0.attn.proj.bias",
+      "backbone.blocks.0.norm2.bias",
+      "backbone.blocks.0.mlp.fc1.bias",
+      "backbone.blocks.0.mlp.fc2.bias",
+      "backbone.blocks.0.PCM.0.bias",
+      "backbone.blocks.0.PCM.1.bias",
+      "backbone.blocks.0.PCM.3.bias"
+    ],
+    "lr_scale": 0.03167635202407837,
+    "lr": 3.167635202407837e-06,
+    "weight_decay": 0.0
+  },
+  "layer_1_no_decay_rel_pos_h": {
+    "param_names": [
+      "backbone.blocks.0.attn.rel_pos_h"
+    ],
+    "lr_scale": 0.03167635202407837,
+    "lr": 3.167635202407837e-06,
+    "weight_decay": 0.0
+  },
+  "layer_1_no_decay_rel_pos_w": {
+    "param_names": [
+      "backbone.blocks.0.attn.rel_pos_w"
+    ],
+    "lr_scale": 0.03167635202407837,
+    "lr": 3.167635202407837e-06,
+    "weight_decay": 0.0
+  },
+  "layer_1_decay_bias": {
+    "param_names": [
+      "backbone.blocks.0.attn.relative_position_bias_table"
+    ],
+    "lr_scale": 0.03167635202407837,
+    "lr": 3.167635202407837e-06,
+    "weight_decay": 0.05
+  },
+  "layer_1_decay": {
+    "param_names": [
+      "backbone.blocks.0.attn.sampling_offsets.2.weight",
+      "backbone.blocks.0.attn.sampling_scales.2.weight",
+      "backbone.blocks.0.attn.sampling_angles.2.weight",
+      "backbone.blocks.0.attn.qkv.weight",
+      "backbone.blocks.0.attn.proj.weight",
+      "backbone.blocks.0.mlp.fc1.weight",
+      "backbone.blocks.0.mlp.fc2.weight",
+      "backbone.blocks.0.PCM.0.weight",
+      "backbone.blocks.0.PCM.3.weight"
+    ],
+    "lr_scale": 0.03167635202407837,
+    "lr": 3.167635202407837e-06,
+    "weight_decay": 0.05
+  },
+  "layer_1_no_decay": {
+    "param_names": [
+      "backbone.blocks.0.PCM.1.weight"
+    ],
+    "lr_scale": 0.03167635202407837,
+    "lr": 3.167635202407837e-06,
+    "weight_decay": 0.0
+  },
+  "layer_2_no_decay_norm": {
+    "param_names": [
+      "backbone.blocks.1.norm1.weight",
+      "backbone.blocks.1.norm2.weight"
+    ],
+    "lr_scale": 0.04223513603210449,
+    "lr": 4.223513603210449e-06,
+    "weight_decay": 0.0
+  },
+  "layer_2_no_decay_bias": {
+    "param_names": [
+      "backbone.blocks.1.norm1.bias",
+      "backbone.blocks.1.attn.q_bias",
+      "backbone.blocks.1.attn.v_bias",
+      "backbone.blocks.1.attn.sampling_offsets.2.bias",
+      "backbone.blocks.1.attn.sampling_scales.2.bias",
+      "backbone.blocks.1.attn.sampling_angles.2.bias",
+      "backbone.blocks.1.attn.proj.bias",
+      "backbone.blocks.1.norm2.bias",
+      "backbone.blocks.1.mlp.fc1.bias",
+      "backbone.blocks.1.mlp.fc2.bias",
+      "backbone.blocks.1.PCM.0.bias",
+      "backbone.blocks.1.PCM.1.bias",
+      "backbone.blocks.1.PCM.3.bias"
+    ],
+    "lr_scale": 0.04223513603210449,
+    "lr": 4.223513603210449e-06,
+    "weight_decay": 0.0
+  },
+  "layer_2_no_decay_rel_pos_h": {
+    "param_names": [
+      "backbone.blocks.1.attn.rel_pos_h"
+    ],
+    "lr_scale": 0.04223513603210449,
+    "lr": 4.223513603210449e-06,
+    "weight_decay": 0.0
+  },
+  "layer_2_no_decay_rel_pos_w": {
+    "param_names": [
+      "backbone.blocks.1.attn.rel_pos_w"
+    ],
+    "lr_scale": 0.04223513603210449,
+    "lr": 4.223513603210449e-06,
+    "weight_decay": 0.0
+  },
+  "layer_2_decay_bias": {
+    "param_names": [
+      "backbone.blocks.1.attn.relative_position_bias_table"
+    ],
+    "lr_scale": 0.04223513603210449,
+    "lr": 4.223513603210449e-06,
+    "weight_decay": 0.05
+  },
+  "layer_2_decay": {
+    "param_names": [
+      "backbone.blocks.1.attn.sampling_offsets.2.weight",
+      "backbone.blocks.1.attn.sampling_scales.2.weight",
+      "backbone.blocks.1.attn.sampling_angles.2.weight",
+      "backbone.blocks.1.attn.qkv.weight",
+      "backbone.blocks.1.attn.proj.weight",
+      "backbone.blocks.1.mlp.fc1.weight",
+      "backbone.blocks.1.mlp.fc2.weight",
+      "backbone.blocks.1.PCM.0.weight",
+      "backbone.blocks.1.PCM.3.weight"
+    ],
+    "lr_scale": 0.04223513603210449,
+    "lr": 4.223513603210449e-06,
+    "weight_decay": 0.05
+  },
+  "layer_2_no_decay": {
+    "param_names": [
+      "backbone.blocks.1.PCM.1.weight"
+    ],
+    "lr_scale": 0.04223513603210449,
+    "lr": 4.223513603210449e-06,
+    "weight_decay": 0.0
+  },
+  "layer_3_no_decay_norm": {
+    "param_names": [
+      "backbone.blocks.2.norm1.weight",
+      "backbone.blocks.2.norm2.weight"
+    ],
+    "lr_scale": 0.056313514709472656,
+    "lr": 5.631351470947266e-06,
+    "weight_decay": 0.0
+  },
+  "layer_3_no_decay_bias": {
+    "param_names": [
+      "backbone.blocks.2.norm1.bias",
+      "backbone.blocks.2.attn.q_bias",
+      "backbone.blocks.2.attn.v_bias",
+      "backbone.blocks.2.attn.proj.bias",
+      "backbone.blocks.2.norm2.bias",
+      "backbone.blocks.2.mlp.fc1.bias",
+      "backbone.blocks.2.mlp.fc2.bias",
+      "backbone.blocks.2.PCM.0.bias",
+      "backbone.blocks.2.PCM.1.bias",
+      "backbone.blocks.2.PCM.3.bias"
+    ],
+    "lr_scale": 0.056313514709472656,
+    "lr": 5.631351470947266e-06,
+    "weight_decay": 0.0
+  },
+  "layer_3_no_decay_rel_pos_h": {
+    "param_names": [
+      "backbone.blocks.2.attn.rel_pos_h"
+    ],
+    "lr_scale": 0.056313514709472656,
+    "lr": 5.631351470947266e-06,
+    "weight_decay": 0.0
+  },
+  "layer_3_no_decay_rel_pos_w": {
+    "param_names": [
+      "backbone.blocks.2.attn.rel_pos_w"
+    ],
+    "lr_scale": 0.056313514709472656,
+    "lr": 5.631351470947266e-06,
+    "weight_decay": 0.0
+  },
+  "layer_3_decay": {
+    "param_names": [
+      "backbone.blocks.2.attn.qkv.weight",
+      "backbone.blocks.2.attn.proj.weight",
+      "backbone.blocks.2.mlp.fc1.weight",
+      "backbone.blocks.2.mlp.fc2.weight",
+      "backbone.blocks.2.PCM.0.weight",
+      "backbone.blocks.2.PCM.3.weight"
+    ],
+    "lr_scale": 0.056313514709472656,
+    "lr": 5.631351470947266e-06,
+    "weight_decay": 0.05
+  },
+  "layer_3_no_decay": {
+    "param_names": [
+      "backbone.blocks.2.PCM.1.weight"
+    ],
+    "lr_scale": 0.056313514709472656,
+    "lr": 5.631351470947266e-06,
+    "weight_decay": 0.0
+  },
+  "layer_4_no_decay_norm": {
+    "param_names": [
+      "backbone.blocks.3.norm1.weight",
+      "backbone.blocks.3.norm2.weight"
+    ],
+    "lr_scale": 0.07508468627929688,
+    "lr": 7.508468627929688e-06,
+    "weight_decay": 0.0
+  },
+  "layer_4_no_decay_bias": {
+    "param_names": [
+      "backbone.blocks.3.norm1.bias",
+      "backbone.blocks.3.attn.q_bias",
+      "backbone.blocks.3.attn.v_bias",
+      "backbone.blocks.3.attn.sampling_offsets.2.bias",
+      "backbone.blocks.3.attn.sampling_scales.2.bias",
+      "backbone.blocks.3.attn.sampling_angles.2.bias",
+      "backbone.blocks.3.attn.proj.bias",
+      "backbone.blocks.3.norm2.bias",
+      "backbone.blocks.3.mlp.fc1.bias",
+      "backbone.blocks.3.mlp.fc2.bias",
+      "backbone.blocks.3.PCM.0.bias",
+      "backbone.blocks.3.PCM.1.bias",
+      "backbone.blocks.3.PCM.3.bias"
+    ],
+    "lr_scale": 0.07508468627929688,
+    "lr": 7.508468627929688e-06,
+    "weight_decay": 0.0
+  },
+  "layer_4_no_decay_rel_pos_h": {
+    "param_names": [
+      "backbone.blocks.3.attn.rel_pos_h"
+    ],
+    "lr_scale": 0.07508468627929688,
+    "lr": 7.508468627929688e-06,
+    "weight_decay": 0.0
+  },
+  "layer_4_no_decay_rel_pos_w": {
+    "param_names": [
+      "backbone.blocks.3.attn.rel_pos_w"
+    ],
+    "lr_scale": 0.07508468627929688,
+    "lr": 7.508468627929688e-06,
+    "weight_decay": 0.0
+  },
+  "layer_4_decay_bias": {
+    "param_names": [
+      "backbone.blocks.3.attn.relative_position_bias_table"
+    ],
+    "lr_scale": 0.07508468627929688,
+    "lr": 7.508468627929688e-06,
+    "weight_decay": 0.05
+  },
+  "layer_4_decay": {
+    "param_names": [
+      "backbone.blocks.3.attn.sampling_offsets.2.weight",
+      "backbone.blocks.3.attn.sampling_scales.2.weight",
+      "backbone.blocks.3.attn.sampling_angles.2.weight",
+      "backbone.blocks.3.attn.qkv.weight",
+      "backbone.blocks.3.attn.proj.weight",
+      "backbone.blocks.3.mlp.fc1.weight",
+      "backbone.blocks.3.mlp.fc2.weight",
+      "backbone.blocks.3.PCM.0.weight",
+      "backbone.blocks.3.PCM.3.weight"
+    ],
+    "lr_scale": 0.07508468627929688,
+    "lr": 7.508468627929688e-06,
+    "weight_decay": 0.05
+  },
+  "layer_4_no_decay": {
+    "param_names": [
+      "backbone.blocks.3.PCM.1.weight"
+    ],
+    "lr_scale": 0.07508468627929688,
+    "lr": 7.508468627929688e-06,
+    "weight_decay": 0.0
+  },
+  "layer_5_no_decay_norm": {
+    "param_names": [
+      "backbone.blocks.4.norm1.weight",
+      "backbone.blocks.4.norm2.weight"
+    ],
+    "lr_scale": 0.1001129150390625,
+    "lr": 1.001129150390625e-05,
+    "weight_decay": 0.0
+  },
+  "layer_5_no_decay_bias": {
+    "param_names": [
+      "backbone.blocks.4.norm1.bias",
+      "backbone.blocks.4.attn.q_bias",
+      "backbone.blocks.4.attn.v_bias",
+      "backbone.blocks.4.attn.sampling_offsets.2.bias",
+      "backbone.blocks.4.attn.sampling_scales.2.bias",
+      "backbone.blocks.4.attn.sampling_angles.2.bias",
+      "backbone.blocks.4.attn.proj.bias",
+      "backbone.blocks.4.norm2.bias",
+      "backbone.blocks.4.mlp.fc1.bias",
+      "backbone.blocks.4.mlp.fc2.bias",
+      "backbone.blocks.4.PCM.0.bias",
+      "backbone.blocks.4.PCM.1.bias",
+      "backbone.blocks.4.PCM.3.bias"
+    ],
+    "lr_scale": 0.1001129150390625,
+    "lr": 1.001129150390625e-05,
+    "weight_decay": 0.0
+  },
+  "layer_5_no_decay_rel_pos_h": {
+    "param_names": [
+      "backbone.blocks.4.attn.rel_pos_h"
+    ],
+    "lr_scale": 0.1001129150390625,
+    "lr": 1.001129150390625e-05,
+    "weight_decay": 0.0
+  },
+  "layer_5_no_decay_rel_pos_w": {
+    "param_names": [
+      "backbone.blocks.4.attn.rel_pos_w"
+    ],
+    "lr_scale": 0.1001129150390625,
+    "lr": 1.001129150390625e-05,
+    "weight_decay": 0.0
+  },
+  "layer_5_decay_bias": {
+    "param_names": [
+      "backbone.blocks.4.attn.relative_position_bias_table"
+    ],
+    "lr_scale": 0.1001129150390625,
+    "lr": 1.001129150390625e-05,
+    "weight_decay": 0.05
+  },
+  "layer_5_decay": {
+    "param_names": [
+      "backbone.blocks.4.attn.sampling_offsets.2.weight",
+      "backbone.blocks.4.attn.sampling_scales.2.weight",
+      "backbone.blocks.4.attn.sampling_angles.2.weight",
+      "backbone.blocks.4.attn.qkv.weight",
+      "backbone.blocks.4.attn.proj.weight",
+      "backbone.blocks.4.mlp.fc1.weight",
+      "backbone.blocks.4.mlp.fc2.weight",
+      "backbone.blocks.4.PCM.0.weight",
+      "backbone.blocks.4.PCM.3.weight"
+    ],
+    "lr_scale": 0.1001129150390625,
+    "lr": 1.001129150390625e-05,
+    "weight_decay": 0.05
+  },
+  "layer_5_no_decay": {
+    "param_names": [
+      "backbone.blocks.4.PCM.1.weight"
+    ],
+    "lr_scale": 0.1001129150390625,
+    "lr": 1.001129150390625e-05,
+    "weight_decay": 0.0
+  },
+  "layer_6_no_decay_norm": {
+    "param_names": [
+      "backbone.blocks.5.norm1.weight",
+      "backbone.blocks.5.norm2.weight"
+    ],
+    "lr_scale": 0.13348388671875,
+    "lr": 1.3348388671875e-05,
+    "weight_decay": 0.0
+  },
+  "layer_6_no_decay_bias": {
+    "param_names": [
+      "backbone.blocks.5.norm1.bias",
+      "backbone.blocks.5.attn.q_bias",
+      "backbone.blocks.5.attn.v_bias",
+      "backbone.blocks.5.attn.proj.bias",
+      "backbone.blocks.5.norm2.bias",
+      "backbone.blocks.5.mlp.fc1.bias",
+      "backbone.blocks.5.mlp.fc2.bias",
+      "backbone.blocks.5.PCM.0.bias",
+      "backbone.blocks.5.PCM.1.bias",
+      "backbone.blocks.5.PCM.3.bias"
+    ],
+    "lr_scale": 0.13348388671875,
+    "lr": 1.3348388671875e-05,
+    "weight_decay": 0.0
+  },
+  "layer_6_no_decay_rel_pos_h": {
+    "param_names": [
+      "backbone.blocks.5.attn.rel_pos_h"
+    ],
+    "lr_scale": 0.13348388671875,
+    "lr": 1.3348388671875e-05,
+    "weight_decay": 0.0
+  },
+  "layer_6_no_decay_rel_pos_w": {
+    "param_names": [
+      "backbone.blocks.5.attn.rel_pos_w"
+    ],
+    "lr_scale": 0.13348388671875,
+    "lr": 1.3348388671875e-05,
+    "weight_decay": 0.0
+  },
+  "layer_6_decay": {
+    "param_names": [
+      "backbone.blocks.5.attn.qkv.weight",
+      "backbone.blocks.5.attn.proj.weight",
+      "backbone.blocks.5.mlp.fc1.weight",
+      "backbone.blocks.5.mlp.fc2.weight",
+      "backbone.blocks.5.PCM.0.weight",
+      "backbone.blocks.5.PCM.3.weight"
+    ],
+    "lr_scale": 0.13348388671875,
+    "lr": 1.3348388671875e-05,
+    "weight_decay": 0.05
+  },
+  "layer_6_no_decay": {
+    "param_names": [
+      "backbone.blocks.5.PCM.1.weight"
+    ],
+    "lr_scale": 0.13348388671875,
+    "lr": 1.3348388671875e-05,
+    "weight_decay": 0.0
+  },
+  "layer_7_no_decay_norm": {
+    "param_names": [
+      "backbone.blocks.6.norm1.weight",
+      "backbone.blocks.6.norm2.weight"
+    ],
+    "lr_scale": 0.177978515625,
+    "lr": 1.77978515625e-05,
+    "weight_decay": 0.0
+  },
+  "layer_7_no_decay_bias": {
+    "param_names": [
+      "backbone.blocks.6.norm1.bias",
+      "backbone.blocks.6.attn.q_bias",
+      "backbone.blocks.6.attn.v_bias",
+      "backbone.blocks.6.attn.sampling_offsets.2.bias",
+      "backbone.blocks.6.attn.sampling_scales.2.bias",
+      "backbone.blocks.6.attn.sampling_angles.2.bias",
+      "backbone.blocks.6.attn.proj.bias",
+      "backbone.blocks.6.norm2.bias",
+      "backbone.blocks.6.mlp.fc1.bias",
+      "backbone.blocks.6.mlp.fc2.bias",
+      "backbone.blocks.6.PCM.0.bias",
+      "backbone.blocks.6.PCM.1.bias",
+      "backbone.blocks.6.PCM.3.bias"
+    ],
+    "lr_scale": 0.177978515625,
+    "lr": 1.77978515625e-05,
+    "weight_decay": 0.0
+  },
+  "layer_7_no_decay_rel_pos_h": {
+    "param_names": [
+      "backbone.blocks.6.attn.rel_pos_h"
+    ],
+    "lr_scale": 0.177978515625,
+    "lr": 1.77978515625e-05,
+    "weight_decay": 0.0
+  },
+  "layer_7_no_decay_rel_pos_w": {
+    "param_names": [
+      "backbone.blocks.6.attn.rel_pos_w"
+    ],
+    "lr_scale": 0.177978515625,
+    "lr": 1.77978515625e-05,
+    "weight_decay": 0.0
+  },
+  "layer_7_decay_bias": {
+    "param_names": [
+      "backbone.blocks.6.attn.relative_position_bias_table"
+    ],
+    "lr_scale": 0.177978515625,
+    "lr": 1.77978515625e-05,
+    "weight_decay": 0.05
+  },
+  "layer_7_decay": {
+    "param_names": [
+      "backbone.blocks.6.attn.sampling_offsets.2.weight",
+      "backbone.blocks.6.attn.sampling_scales.2.weight",
+      "backbone.blocks.6.attn.sampling_angles.2.weight",
+      "backbone.blocks.6.attn.qkv.weight",
+      "backbone.blocks.6.attn.proj.weight",
+      "backbone.blocks.6.mlp.fc1.weight",
+      "backbone.blocks.6.mlp.fc2.weight",
+      "backbone.blocks.6.PCM.0.weight",
+      "backbone.blocks.6.PCM.3.weight"
+    ],
+    "lr_scale": 0.177978515625,
+    "lr": 1.77978515625e-05,
+    "weight_decay": 0.05
+  },
+  "layer_7_no_decay": {
+    "param_names": [
+      "backbone.blocks.6.PCM.1.weight"
+    ],
+    "lr_scale": 0.177978515625,
+    "lr": 1.77978515625e-05,
+    "weight_decay": 0.0
+  },
+  "layer_8_no_decay_norm": {
+    "param_names": [
+      "backbone.blocks.7.norm1.weight",
+      "backbone.blocks.7.norm2.weight"
+    ],
+    "lr_scale": 0.2373046875,
+    "lr": 2.3730468750000002e-05,
+    "weight_decay": 0.0
+  },
+  "layer_8_no_decay_bias": {
+    "param_names": [
+      "backbone.blocks.7.norm1.bias",
+      "backbone.blocks.7.attn.q_bias",
+      "backbone.blocks.7.attn.v_bias",
+      "backbone.blocks.7.attn.sampling_offsets.2.bias",
+      "backbone.blocks.7.attn.sampling_scales.2.bias",
+      "backbone.blocks.7.attn.sampling_angles.2.bias",
+      "backbone.blocks.7.attn.proj.bias",
+      "backbone.blocks.7.norm2.bias",
+      "backbone.blocks.7.mlp.fc1.bias",
+      "backbone.blocks.7.mlp.fc2.bias",
+      "backbone.blocks.7.PCM.0.bias",
+      "backbone.blocks.7.PCM.1.bias",
+      "backbone.blocks.7.PCM.3.bias"
+    ],
+    "lr_scale": 0.2373046875,
+    "lr": 2.3730468750000002e-05,
+    "weight_decay": 0.0
+  },
+  "layer_8_no_decay_rel_pos_h": {
+    "param_names": [
+      "backbone.blocks.7.attn.rel_pos_h"
+    ],
+    "lr_scale": 0.2373046875,
+    "lr": 2.3730468750000002e-05,
+    "weight_decay": 0.0
+  },
+  "layer_8_no_decay_rel_pos_w": {
+    "param_names": [
+      "backbone.blocks.7.attn.rel_pos_w"
+    ],
+    "lr_scale": 0.2373046875,
+    "lr": 2.3730468750000002e-05,
+    "weight_decay": 0.0
+  },
+  "layer_8_decay_bias": {
+    "param_names": [
+      "backbone.blocks.7.attn.relative_position_bias_table"
+    ],
+    "lr_scale": 0.2373046875,
+    "lr": 2.3730468750000002e-05,
+    "weight_decay": 0.05
+  },
+  "layer_8_decay": {
+    "param_names": [
+      "backbone.blocks.7.attn.sampling_offsets.2.weight",
+      "backbone.blocks.7.attn.sampling_scales.2.weight",
+      "backbone.blocks.7.attn.sampling_angles.2.weight",
+      "backbone.blocks.7.attn.qkv.weight",
+      "backbone.blocks.7.attn.proj.weight",
+      "backbone.blocks.7.mlp.fc1.weight",
+      "backbone.blocks.7.mlp.fc2.weight",
+      "backbone.blocks.7.PCM.0.weight",
+      "backbone.blocks.7.PCM.3.weight"
+    ],
+    "lr_scale": 0.2373046875,
+    "lr": 2.3730468750000002e-05,
+    "weight_decay": 0.05
+  },
+  "layer_8_no_decay": {
+    "param_names": [
+      "backbone.blocks.7.PCM.1.weight"
+    ],
+    "lr_scale": 0.2373046875,
+    "lr": 2.3730468750000002e-05,
+    "weight_decay": 0.0
+  },
+  "layer_9_no_decay_norm": {
+    "param_names": [
+      "backbone.blocks.8.norm1.weight",
+      "backbone.blocks.8.norm2.weight"
+    ],
+    "lr_scale": 0.31640625,
+    "lr": 3.1640625e-05,
+    "weight_decay": 0.0
+  },
+  "layer_9_no_decay_bias": {
+    "param_names": [
+      "backbone.blocks.8.norm1.bias",
+      "backbone.blocks.8.attn.q_bias",
+      "backbone.blocks.8.attn.v_bias",
+      "backbone.blocks.8.attn.proj.bias",
+      "backbone.blocks.8.norm2.bias",
+      "backbone.blocks.8.mlp.fc1.bias",
+      "backbone.blocks.8.mlp.fc2.bias",
+      "backbone.blocks.8.PCM.0.bias",
+      "backbone.blocks.8.PCM.1.bias",
+      "backbone.blocks.8.PCM.3.bias"
+    ],
+    "lr_scale": 0.31640625,
+    "lr": 3.1640625e-05,
+    "weight_decay": 0.0
+  },
+  "layer_9_no_decay_rel_pos_h": {
+    "param_names": [
+      "backbone.blocks.8.attn.rel_pos_h"
+    ],
+    "lr_scale": 0.31640625,
+    "lr": 3.1640625e-05,
+    "weight_decay": 0.0
+  },
+  "layer_9_no_decay_rel_pos_w": {
+    "param_names": [
+      "backbone.blocks.8.attn.rel_pos_w"
+    ],
+    "lr_scale": 0.31640625,
+    "lr": 3.1640625e-05,
+    "weight_decay": 0.0
+  },
+  "layer_9_decay": {
+    "param_names": [
+      "backbone.blocks.8.attn.qkv.weight",
+      "backbone.blocks.8.attn.proj.weight",
+      "backbone.blocks.8.mlp.fc1.weight",
+      "backbone.blocks.8.mlp.fc2.weight",
+      "backbone.blocks.8.PCM.0.weight",
+      "backbone.blocks.8.PCM.3.weight"
+    ],
+    "lr_scale": 0.31640625,
+    "lr": 3.1640625e-05,
+    "weight_decay": 0.05
+  },
+  "layer_9_no_decay": {
+    "param_names": [
+      "backbone.blocks.8.PCM.1.weight"
+    ],
+    "lr_scale": 0.31640625,
+    "lr": 3.1640625e-05,
+    "weight_decay": 0.0
+  },
+  "layer_10_no_decay_norm": {
+    "param_names": [
+      "backbone.blocks.9.norm1.weight",
+      "backbone.blocks.9.norm2.weight"
+    ],
+    "lr_scale": 0.421875,
+    "lr": 4.21875e-05,
+    "weight_decay": 0.0
+  },
+  "layer_10_no_decay_bias": {
+    "param_names": [
+      "backbone.blocks.9.norm1.bias",
+      "backbone.blocks.9.attn.q_bias",
+      "backbone.blocks.9.attn.v_bias",
+      "backbone.blocks.9.attn.sampling_offsets.2.bias",
+      "backbone.blocks.9.attn.sampling_scales.2.bias",
+      "backbone.blocks.9.attn.sampling_angles.2.bias",
+      "backbone.blocks.9.attn.proj.bias",
+      "backbone.blocks.9.norm2.bias",
+      "backbone.blocks.9.mlp.fc1.bias",
+      "backbone.blocks.9.mlp.fc2.bias",
+      "backbone.blocks.9.PCM.0.bias",
+      "backbone.blocks.9.PCM.1.bias",
+      "backbone.blocks.9.PCM.3.bias"
+    ],
+    "lr_scale": 0.421875,
+    "lr": 4.21875e-05,
+    "weight_decay": 0.0
+  },
+  "layer_10_no_decay_rel_pos_h": {
+    "param_names": [
+      "backbone.blocks.9.attn.rel_pos_h"
+    ],
+    "lr_scale": 0.421875,
+    "lr": 4.21875e-05,
+    "weight_decay": 0.0
+  },
+  "layer_10_no_decay_rel_pos_w": {
+    "param_names": [
+      "backbone.blocks.9.attn.rel_pos_w"
+    ],
+    "lr_scale": 0.421875,
+    "lr": 4.21875e-05,
+    "weight_decay": 0.0
+  },
+  "layer_10_decay_bias": {
+    "param_names": [
+      "backbone.blocks.9.attn.relative_position_bias_table"
+    ],
+    "lr_scale": 0.421875,
+    "lr": 4.21875e-05,
+    "weight_decay": 0.05
+  },
+  "layer_10_decay": {
+    "param_names": [
+      "backbone.blocks.9.attn.sampling_offsets.2.weight",
+      "backbone.blocks.9.attn.sampling_scales.2.weight",
+      "backbone.blocks.9.attn.sampling_angles.2.weight",
+      "backbone.blocks.9.attn.qkv.weight",
+      "backbone.blocks.9.attn.proj.weight",
+      "backbone.blocks.9.mlp.fc1.weight",
+      "backbone.blocks.9.mlp.fc2.weight",
+      "backbone.blocks.9.PCM.0.weight",
+      "backbone.blocks.9.PCM.3.weight"
+    ],
+    "lr_scale": 0.421875,
+    "lr": 4.21875e-05,
+    "weight_decay": 0.05
+  },
+  "layer_10_no_decay": {
+    "param_names": [
+      "backbone.blocks.9.PCM.1.weight"
+    ],
+    "lr_scale": 0.421875,
+    "lr": 4.21875e-05,
+    "weight_decay": 0.0
+  },
+  "layer_11_no_decay_norm": {
+    "param_names": [
+      "backbone.blocks.10.norm1.weight",
+      "backbone.blocks.10.norm2.weight"
+    ],
+    "lr_scale": 0.5625,
+    "lr": 5.6250000000000005e-05,
+    "weight_decay": 0.0
+  },
+  "layer_11_no_decay_bias": {
+    "param_names": [
+      "backbone.blocks.10.norm1.bias",
+      "backbone.blocks.10.attn.q_bias",
+      "backbone.blocks.10.attn.v_bias",
+      "backbone.blocks.10.attn.sampling_offsets.2.bias",
+      "backbone.blocks.10.attn.sampling_scales.2.bias",
+      "backbone.blocks.10.attn.sampling_angles.2.bias",
+      "backbone.blocks.10.attn.proj.bias",
+      "backbone.blocks.10.norm2.bias",
+      "backbone.blocks.10.mlp.fc1.bias",
+      "backbone.blocks.10.mlp.fc2.bias",
+      "backbone.blocks.10.PCM.0.bias",
+      "backbone.blocks.10.PCM.1.bias",
+      "backbone.blocks.10.PCM.3.bias"
+    ],
+    "lr_scale": 0.5625,
+    "lr": 5.6250000000000005e-05,
+    "weight_decay": 0.0
+  },
+  "layer_11_no_decay_rel_pos_h": {
+    "param_names": [
+      "backbone.blocks.10.attn.rel_pos_h"
+    ],
+    "lr_scale": 0.5625,
+    "lr": 5.6250000000000005e-05,
+    "weight_decay": 0.0
+  },
+  "layer_11_no_decay_rel_pos_w": {
+    "param_names": [
+      "backbone.blocks.10.attn.rel_pos_w"
+    ],
+    "lr_scale": 0.5625,
+    "lr": 5.6250000000000005e-05,
+    "weight_decay": 0.0
+  },
+  "layer_11_decay_bias": {
+    "param_names": [
+      "backbone.blocks.10.attn.relative_position_bias_table"
+    ],
+    "lr_scale": 0.5625,
+    "lr": 5.6250000000000005e-05,
+    "weight_decay": 0.05
+  },
+  "layer_11_decay": {
+    "param_names": [
+      "backbone.blocks.10.attn.sampling_offsets.2.weight",
+      "backbone.blocks.10.attn.sampling_scales.2.weight",
+      "backbone.blocks.10.attn.sampling_angles.2.weight",
+      "backbone.blocks.10.attn.qkv.weight",
+      "backbone.blocks.10.attn.proj.weight",
+      "backbone.blocks.10.mlp.fc1.weight",
+      "backbone.blocks.10.mlp.fc2.weight",
+      "backbone.blocks.10.PCM.0.weight",
+      "backbone.blocks.10.PCM.3.weight"
+    ],
+    "lr_scale": 0.5625,
+    "lr": 5.6250000000000005e-05,
+    "weight_decay": 0.05
+  },
+  "layer_11_no_decay": {
+    "param_names": [
+      "backbone.blocks.10.PCM.1.weight"
+    ],
+    "lr_scale": 0.5625,
+    "lr": 5.6250000000000005e-05,
+    "weight_decay": 0.0
+  },
+  "layer_12_no_decay_norm": {
+    "param_names": [
+      "backbone.blocks.11.norm1.weight",
+      "backbone.blocks.11.norm2.weight"
+    ],
+    "lr_scale": 0.75,
+    "lr": 7.500000000000001e-05,
+    "weight_decay": 0.0
+  },
+  "layer_12_no_decay_bias": {
+    "param_names": [
+      "backbone.blocks.11.norm1.bias",
+      "backbone.blocks.11.attn.q_bias",
+      "backbone.blocks.11.attn.v_bias",
+      "backbone.blocks.11.attn.proj.bias",
+      "backbone.blocks.11.norm2.bias",
+      "backbone.blocks.11.mlp.fc1.bias",
+      "backbone.blocks.11.mlp.fc2.bias",
+      "backbone.blocks.11.PCM.0.bias",
+      "backbone.blocks.11.PCM.1.bias",
+      "backbone.blocks.11.PCM.3.bias"
+    ],
+    "lr_scale": 0.75,
+    "lr": 7.500000000000001e-05,
+    "weight_decay": 0.0
+  },
+  "layer_12_no_decay_rel_pos_h": {
+    "param_names": [
+      "backbone.blocks.11.attn.rel_pos_h"
+    ],
+    "lr_scale": 0.75,
+    "lr": 7.500000000000001e-05,
+    "weight_decay": 0.0
+  },
+  "layer_12_no_decay_rel_pos_w": {
+    "param_names": [
+      "backbone.blocks.11.attn.rel_pos_w"
+    ],
+    "lr_scale": 0.75,
+    "lr": 7.500000000000001e-05,
+    "weight_decay": 0.0
+  },
+  "layer_12_decay": {
+    "param_names": [
+      "backbone.blocks.11.attn.qkv.weight",
+      "backbone.blocks.11.attn.proj.weight",
+      "backbone.blocks.11.mlp.fc1.weight",
+      "backbone.blocks.11.mlp.fc2.weight",
+      "backbone.blocks.11.PCM.0.weight",
+      "backbone.blocks.11.PCM.3.weight"
+    ],
+    "lr_scale": 0.75,
+    "lr": 7.500000000000001e-05,
+    "weight_decay": 0.05
+  },
+  "layer_12_no_decay": {
+    "param_names": [
+      "backbone.blocks.11.PCM.1.weight"
+    ],
+    "lr_scale": 0.75,
+    "lr": 7.500000000000001e-05,
+    "weight_decay": 0.0
+  },
+  "layer_13_no_decay_norm": {
+    "param_names": [
+      "backbone.norm.weight"
+    ],
+    "lr_scale": 1.0,
+    "lr": 0.0001,
+    "weight_decay": 0.0
+  },
+  "layer_13_no_decay_bias": {
+    "param_names": [
+      "backbone.norm.bias",
+      "backbone.fpn1.0.bias",
+      "backbone.fpn1.1.ln.bias",
+      "backbone.fpn1.3.bias",
+      "backbone.fpn2.0.bias",
+      "neck.lateral_convs.0.conv.bias",
+      "neck.lateral_convs.1.conv.bias",
+      "neck.lateral_convs.2.conv.bias",
+      "neck.lateral_convs.3.conv.bias",
+      "neck.fpn_convs.0.conv.bias",
+      "neck.fpn_convs.1.conv.bias",
+      "neck.fpn_convs.2.conv.bias",
+      "neck.fpn_convs.3.conv.bias",
+      "rpn_head.rpn_conv.bias",
+      "rpn_head.rpn_cls.bias",
+      "rpn_head.rpn_reg.bias",
+      "roi_head.bbox_head.fc_cls.bias",
+      "roi_head.bbox_head.fc_reg.bias",
+      "roi_head.bbox_head.shared_fcs.0.bias",
+      "roi_head.bbox_head.shared_fcs.1.bias"
+    ],
+    "lr_scale": 1.0,
+    "lr": 0.0001,
+    "weight_decay": 0.0
+  },
+  "layer_13_decay": {
+    "param_names": [
+      "backbone.fpn1.0.weight",
+      "backbone.fpn1.3.weight",
+      "backbone.fpn2.0.weight",
+      "neck.lateral_convs.0.conv.weight",
+      "neck.lateral_convs.1.conv.weight",
+      "neck.lateral_convs.2.conv.weight",
+      "neck.lateral_convs.3.conv.weight",
+      "neck.fpn_convs.0.conv.weight",
+      "neck.fpn_convs.1.conv.weight",
+      "neck.fpn_convs.2.conv.weight",
+      "neck.fpn_convs.3.conv.weight",
+      "rpn_head.rpn_conv.weight",
+      "rpn_head.rpn_cls.weight",
+      "rpn_head.rpn_reg.weight",
+      "roi_head.bbox_head.fc_cls.weight",
+      "roi_head.bbox_head.fc_reg.weight",
+      "roi_head.bbox_head.shared_fcs.0.weight",
+      "roi_head.bbox_head.shared_fcs.1.weight"
+    ],
+    "lr_scale": 1.0,
+    "lr": 0.0001,
+    "weight_decay": 0.05
+  },
+  "layer_13_no_decay": {
+    "param_names": [
+      "backbone.fpn1.1.ln.weight"
+    ],
+    "lr_scale": 1.0,
+    "lr": 0.0001,
+    "weight_decay": 0.0
+  }
+}

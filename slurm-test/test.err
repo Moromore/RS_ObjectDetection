@@ -1,0 +1,4 @@
+
+	NVidia cuda 11.4.1 loaded
+
+slurmstepd: error: *** JOB 52945 ON tu-c0r7n36 CANCELLED AT 2025-03-09T19:38:06 DUE TO TIME LIMIT ***
